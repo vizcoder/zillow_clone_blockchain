@@ -6,25 +6,44 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Offers from "./pages/Offers";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import Header from "./components/Header";
+import YouTubeForm from "./components/YouTubeForm";
+
+import { Sandpack } from "@codesandbox/sandpack-react";
 
 function App() {
   return (
-    // <div className='font-bold'>Hello
-    // </div>
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/profile" element={<Profile />}></Route>
-          <Route path="/forgot-password" element={<ForgotPassword />}></Route>
-          <Route path="/offers" element={<Offers />}></Route>
-          <Route path="/sign-in" element={<SignIn />}></Route>
-          <Route path="/sign-up" element={<SignUp />}></Route>
-        </Routes>
-      </Router>
-    </>
+    <Sandpack
+      template="react"
+      // options={{
+      //   bundlerURL: "http://localhost:8080",
+      // }}
+    />
   );
+  // return <Sandpack template="nextjs" />;
 }
+
+// function App() {
+//   return (
+//     // <div className='font-bold'>Hello
+//     // </div>
+//     <>
+//       <Router>
+//         <Header />
+//         <Routes>
+//           <Route path="/" element={<YouTubeForm />}></Route>
+
+//           <Route path="/home" element={<Home />}></Route>
+//           <Route path="/profile" element={<Profile />}></Route>
+//           <Route path="/forgot-password" element={<ForgotPassword />}></Route>
+//           <Route path="/offers" element={<Offers />}></Route>
+//           <Route path="/sign-in" element={<SignIn />}></Route>
+//           <Route path="/sign-up" element={<SignUp />}></Route>
+//         </Routes>
+//       </Router>
+//     </>
+//   );
+// }
 
 export default App;
 
